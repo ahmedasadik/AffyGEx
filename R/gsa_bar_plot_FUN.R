@@ -1,4 +1,4 @@
-gsa_bar_plot_FUN <- function (idx, gsa_ls, ts = 8, res_path, coi, wd, ht, pix = 600)
+gsa_bar_plot_FUN <- function (idx, gsa_ls, ts = 8, res_path, coi, wd, ht, pix = 600, file_type="pdf")
 {
   pthwy_name <- names(gsa_ls)[idx]
   gsa_df <- gsa_ls[[idx]]
@@ -43,7 +43,17 @@ gsa_bar_plot_FUN <- function (idx, gsa_ls, ts = 8, res_path, coi, wd, ht, pix = 
                                                                                                     position = position_nudge(0, -1.3)) + coord_flip() +
     scale_colour_manual(values = "grey4")
   cat(toupper(pthwy_name), "saved to disk", fill = T)
-  ggsave(filename = paste0(getwd(), res_path, coi, "_gsa_",
+  if(file_type=="jpg"){
+    ggsave(filename = paste0(getwd(), res_path, coi, "_gsa_",
                            pthwy_name, ".jpg"), plot = gsa_p, width = wd, height = ht,
          dpi = pix, units = "in")
+  } else if(file_type=="pdf"){
+    ggsave(filename = paste0(getwd(), res_path, coi, "_gsa_",
+                             pthwy_name, ".pdf"), plot = gsa_p, width = wd, height = ht,
+           dpi = pix, units = "in")
+  } else if(file_type=="npg"){
+    ggsave(filename = paste0(getwd(), res_path, coi, "_gsa_",
+                             pthwy_name, ".npg"), plot = gsa_p, width = wd, height = ht,
+           dpi = pix, units = "in")
+  }
 }

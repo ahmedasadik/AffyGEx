@@ -7,7 +7,7 @@ GSA results barplots
 This function generates barplots of the top 20 (10 up- and 10 down) regulated enriched gene sets. If the number of up- or down regulated gene sets are less than 10, the remaining gene sets are added from the other group of gene sets. Only gene sets meeting the specific p.value cutoff are plotted, even if the number of gene sets are less than 20.
 }
 \usage{
-gsa_bar_plot_FUN(idx, gsa_ls, ts = 8, res_path, coi, wd, ht, pix = 600)
+gsa_bar_plot_FUN(idx, gsa_ls, ts = 8, res_path, coi, wd, ht, pix = 600, file_type="pdf")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -30,6 +30,9 @@ width argument passed to ggsave}
 height argument passed to ggsave}
   \item{pix}{
 the pixel per inch (ppi) value passed to ggsave
+}
+ \item{file_type}{
+character string passed to ggsave, possible values are "pdf","npg" and "jpg"
 }
 }
 \author{
