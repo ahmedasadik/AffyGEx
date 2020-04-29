@@ -1,11 +1,13 @@
 Package: AffyGEx
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Affy_hugene_2.0 Pipelines
+Version: 2.0
+Authors@R: person("Ahmed", "Sadik", email = "ahmed.asadik@gmail.com", role = c("aut", "cre"))
+Author: Ahmed Sadik
+Maintainer: Ahmed Sadik <ahmed.asadik@gmail.com>
+Description: This package was developed for functions mainly used for analyzing AFFY_Hu_Gene 2.0 ST arrays. The package extends easily for other Affymetrix exon and gene arrays. Other applications are possible, especially for downstream analyses.
+Depends: R (>= 3.1), limma, purrr, oligo, pd.hugene.2.0.st, pd.hugene.1.0.st.v1, pd.huex.1.0.st.v2, pd.hugene.1.1.st.v1, pd.hugene.2.1.st, RColorBrewer, affycoretools, biomaRt, GSEABase, clusterProfiler, ggplot2, gplots, org.Hs.eg.db, sva, parallel, ggpubr, reshape, topGO
+License: MIT license
 Encoding: UTF-8
 LazyData: true
+NeedsCompilation: no
+
