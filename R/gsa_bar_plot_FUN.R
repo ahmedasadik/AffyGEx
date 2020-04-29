@@ -45,15 +45,15 @@ gsa_bar_plot_FUN <- function (idx, gsa_ls, ts = 8, res_path, coi, wd, ht, pix = 
   cat(toupper(pthwy_name), "saved to disk", fill = T)
   if(file_type=="jpg"){
     ggsave(filename = paste0(getwd(), res_path, coi, "_gsa_",
-                           pthwy_name, ".jpg"), plot = gsa_p, width = wd, height = ht,
-         dpi = pix, units = "in")
+                           pthwy_name, ".jpeg"), plot = gsa_p, width = wd, height = ht,
+         dpi = pix, device = "jpeg")
   } else if(file_type=="pdf"){
     ggsave(filename = paste0(getwd(), res_path, coi, "_gsa_",
                              pthwy_name, ".pdf"), plot = gsa_p, width = wd, height = ht,
-           dpi = pix, units = "in")
-  } else if(file_type=="npg"){
+           dpi = pix, units = "in", device = "pdf")
+  } else if(file_type=="png"){
     ggsave(filename = paste0(getwd(), res_path, coi, "_gsa_",
-                             pthwy_name, ".npg"), plot = gsa_p, width = wd, height = ht,
-           dpi = pix, units = "in")
+                             pthwy_name, ".png"), plot = gsa_p, width = wd, height = ht,
+           dpi = pix,device = "png")
   }
 }
